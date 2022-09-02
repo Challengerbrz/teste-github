@@ -16,8 +16,8 @@ fetch('https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados/ultimos/1?formato=
 .then(response => response.json())
 .then(json => selic_hoje = json)
 
-
 calcular_btn.addEventListener('click', ()=>{
+    
     valor_bruto = (capital.value * ((1 + (taxa_de_juros.value/100))**periodo.value)) + (aporte.value * 
     (((((1 + (taxa_de_juros.value/100)))**periodo.value) -1)/(taxa_de_juros.value/100)))
 
